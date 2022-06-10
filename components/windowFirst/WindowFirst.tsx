@@ -1,9 +1,9 @@
-import styles from './WindowFirst.module.scss';
+import { HeaderSecond } from "../../Layout/HeaderSecond/HeaderSecond";
+import styles from "./WindowFirst.module.scss";
 
 const WindowFirst = (): JSX.Element => {
   return (
     <div className={styles.window}>
-      WindowFirst
       <div className={styles.videoContainer}>
         <video className={styles.video} autoPlay muted loop>
           <source
@@ -12,6 +12,7 @@ const WindowFirst = (): JSX.Element => {
           ></source>
         </video>
       </div>
+      <HeaderSecond />
     </div>
   );
 };
