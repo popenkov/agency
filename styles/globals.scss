@@ -1,3 +1,13 @@
+@import './variables.scss';
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
@@ -14,3 +24,5 @@ a {
 * {
   box-sizing: border-box;
 }
+
+$dark-background: #282828;
