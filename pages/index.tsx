@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+
+import { useInView } from 'react-intersection-observer';
 
 import AboutUs from '../components/Windows/AboutUs/AboutUs';
 import Cases from '../components/Windows/Cases/Cases';
@@ -7,68 +8,24 @@ import ContactUs from '../components/Windows/ContactUs/ContactUs';
 import WindowFirst from '../components/Windows/windowFirst/WindowFirst';
 import WindowFooter from '../components/Windows/WindowFooter/WindowFooter';
 import { scroller } from '../utils/scroller';
+import styles from './index.module.scss';
 
 import { withLayout } from '../Layout/Layout';
+import { useEffect, useRef } from 'react';
 
 const Home: NextPage = () => {
+  const pageEl = useRef(null);
+
+  // const { ref, inView } = useInView({
+  //   threshold: 0,
+  // });
+
   return (
-    <div className="page">
-      <Parallax pages={3} style={{ top: '0', left: '0' }}>
-        <ParallaxLayer
-          offset={0}
-          speed={2.5}
-          factor={0.5}
-          style={{
-            // display: 'flex',
-            // justifyContent: 'center',
-            // alignItems: 'center',
-            boxShadow: '1px 2px 9px #F4AAB9',
-          }}
-        >
-          <WindowFirst />
-        </ParallaxLayer>
+    <div className={styles.page} ref={pageEl}>
+      <WindowFirst />
+      <AboutUs />
+      <Cases />
 
-        {/* <ParallaxLayer
-          offset={1}
-          speed={2}
-          // style={{ backgroundColor: 'yellow' }}
-        >
-          <p>test</p>
-        </ParallaxLayer> */}
-
-        <ParallaxLayer
-          offset={1}
-          factor={1}
-          speed={0.5}
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            color: 'white',
-          }}
-        >
-          <AboutUs />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={2}
-          // style={{ backgroundColor: 'red' }}
-        ></ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={0.5}
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            color: 'white',
-          }}
-        >
-          <WindowFooter />
-        </ParallaxLayer>
-      </Parallax>
       {/* <WindowFirst />
       <AboutUs />
       <Cases />

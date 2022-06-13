@@ -6,15 +6,27 @@
   z-index: 1;
   height: auto;
   flex-grow: 0;
-  backdrop-filter: blur(5px);
+  // backdrop-filter: blur(5px);
 }
 
 .headerContainer {
   position: relative;
-  max-width: 1920px;
+  max-width: 1560px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.68em 16.25em;
+  padding-top: 60px;
+}
+
+.headerLink {
+}
+
+.headerNavLink {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
 }

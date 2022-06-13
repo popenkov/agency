@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-spring/parallax": "^9.4.5",
     "@react-spring/web": "^9.4.5",
+    "@svgr/webpack": "^6.2.1",
     "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
     "lax.js": "^2.0.3",
@@ -20,7 +21,8 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-spring": "^9.4.5",
-    "use-lax": "^4.0.4"
+    "use-lax": "^4.0.4",
+    "vanta": "^0.5.22"
   },
   "devDependencies": {
     "@types/node": "17.0.41",
