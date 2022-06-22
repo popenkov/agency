@@ -28,7 +28,7 @@ const casesData = [
 
 function Cases() {
   return (
-    <div>
+    <div className={styles.cases}>
       {casesData &&
         casesData.map((item) => {
           return <Case {...item} />;

@@ -1,8 +1,55 @@
 .aboutUs {
   position: relative;
   z-index: 2;
-  height: 100vh;
+  // height: 100vh;
+  // min-height: 100vh;
+  // height: 100vh;
+  height: 200vh;
   width: 100vw;
+  //overflow: visible;
   // background-color: #fff;
   background-color: #ff6d6d;
+}
+
+.curtain {
+  // background-image: linear-gradient(to bottom, #000 50%, #fff 50%);
+  // background: green;
+  min-height: 200vh;
+  background-color: #eee;
+  background-image: linear-gradient(to bottom, #000 50%, #fff 50%);
+  background-size: cover;
+}
+
+// .curtain::after {
+//   content: '';
+//   display: block;
+//   min-height: 100vh;
+// }
+
+.container {
+  /** make the content sticky **/
+  position: sticky;
+  top: 0;
+
+  /** blend the content with the contrast effect **/
+  mix-blend-mode: difference;
+
+  /** center the content **/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /** set the minimum height of the section **/
+  min-height: 100vh;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1560px;
+  padding: 1.68em 16.25em;
+
+  margin: 0 auto;
+  color: white;
 }

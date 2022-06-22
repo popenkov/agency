@@ -30,7 +30,11 @@ const WindowFirst = React.forwardRef((): JSX.Element => {
   return (
     <div className={styles.window} id="main-section" ref={myRef}>
       <Header className={styles.header} />
-      <div className={styles.windowBody}></div>
+      <div className={styles.windowBody}>
+        <h1 className={styles.title}>
+          Web-разработка <br /> под ключ
+        </h1>
+      </div>
 
       {/* <video className={styles.video} preload="auto" autoPlay muted loop>
         <source
