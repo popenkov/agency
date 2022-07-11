@@ -1,4 +1,4 @@
-import React from 'react';
+import style from './Case.module.scss';
 
 type PhotosType = {};
 
@@ -12,8 +12,8 @@ type CaseTypes = {
 
 function Case({ title, link, category, works, photos }: CaseTypes) {
   return (
-    <div>
-      <div>
+    <div className={style.case}>
+      <div className={style.header}>
         <h2>{title}</h2>
         <a href={link}>{link}</a>
       </div>

@@ -1,6 +1,18 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import CaseNavigation from '../../case-navigation/CaseNavigation';
 import Case from '../../Case/Case';
 import styles from './Cases.module.scss';
+
+const navigationItems = [
+  {
+    name: 'test',
+    link: 'test',
+  },
+  {
+    name: 'test',
+    link: 'test',
+  },
+];
 
 const casesData = [
   {
@@ -28,11 +40,19 @@ const casesData = [
 
 function Cases() {
   return (
-    <div className={styles.cases}>
-      {casesData &&
-        casesData.map((item) => {
-          return <Case {...item} />;
-        })}
+    <div className={styles.container}>
+      <div className={styles.navigation}>
+        {navigationItems &&
+          navigationItems.map((item, index) => {
+            return <CaseNavigation key={index} {...item} />;
+          })}
+      </div>
+      <div className={styles.cases}>
+        {casesData &&
+          casesData.map((item, index) => {
+            return <Case key={index} {...item} />;
+          })}
+      </div>
     </div>
     // <Parallax pages={3} style={{ backgroundColor: '#282828' }}>
     //   <ParallaxLayer offset={0} speed={0} style={{}}></ParallaxLayer>
