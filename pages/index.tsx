@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
-
-import { useInView } from 'react-intersection-observer';
+import { useEffect, useState, useRef } from 'react';
 
 import AboutUs from '../components/Windows/AboutUs/AboutUs';
 import Cases from '../components/Windows/Cases/Cases';
@@ -11,17 +10,31 @@ import { scroller } from '../utils/scroller';
 import styles from './index.module.scss';
 
 import { withLayout } from '../Layout/Layout';
-import { useEffect, useRef } from 'react';
+import { Header } from '../Layout/Header/Header';
+import classNames from 'classnames';
 
 const Home: NextPage = () => {
-  const pageEl = useRef(null);
-
-  // const { ref, inView } = useInView({
-  //   threshold: 0,
-  // });
+  const headerRef = useRef<HTMLDivElement | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const headerHeight = headerRef?.current?.clientHeight;
+      const pageHeight = window.innerHeight;
+      console.log(window.innerHeight);
+      window.addEventListener('scroll', () => {
+        setIsScrolled(window.pageYOffset > pageHeight - headerHeight / 2);
+      });
+    }
+  }, []);
 
   return (
-    <div className={styles.page} ref={pageEl}>
+    <div className={styles.page}>
+      <Header
+        ref={headerRef}
+        className={classNames(styles.header, {
+          [styles.scrolled]: isScrolled === true,
+        })}
+      />
       <WindowFirst />
       <AboutUs />
       <Cases />
@@ -31,6 +44,7 @@ const Home: NextPage = () => {
       <Cases />
       <ContactUs />
       <WindowFooter /> */}
+      <WindowFooter />
     </div>
   );
 };

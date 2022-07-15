@@ -5,7 +5,7 @@ import styles from './WindowFirst.module.scss';
 import { Header } from '../../../Layout/Header/Header';
 import { Footer } from '../../../Layout/Footer/Footer';
 
-const WindowFirst = React.forwardRef((): JSX.Element => {
+const WindowFirst = React.forwardRef((windowRef): JSX.Element => {
   //    speed: -10,
   //  });
 
@@ -29,7 +29,7 @@ const WindowFirst = React.forwardRef((): JSX.Element => {
   }, [vantaEffect]);
   return (
     <div className={styles.window} id="main-section" ref={myRef}>
-      <Header className={styles.header} />
+      {/* <Header className={styles.header} /> */}
       <div className={styles.windowBody}>
         <h1 className={styles.title}>
           Web-разработка <br /> под ключ

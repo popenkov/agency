@@ -3775,7 +3775,7 @@
     "@react-spring/web" "~9.4.5"
     "@react-spring/zdog" "~9.4.5"
 
-"react@^16.11.0  || >=17.0.0 || >=18.0.0", "react@^16.8 || ^17.0", "react@^16.8.0  || >=17.0.0 || >=18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.1.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@18.1.0":
+"react@^16.11.0  || >=17.0.0 || >=18.0.0", "react@^16.8 || ^17.0", "react@^16.8.0  || >=17.0.0 || >=18.0.0", "react@^17.0.2 || ^18.0.0-0", "react@^18.1.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>=16.9.0", "react@18.1.0":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.1.0.tgz"
   "version" "18.1.0"
@@ -4469,6 +4469,11 @@
   "integrity" "sha512-gIv9Z9ok7KgxmZxBHdgO8cVN3Ozmx0D4kykFyQrABAdjtz93rkRus0R+DjEoEZhUM7moXPrF2Qi0vx2VMuUipw=="
   "resolved" "https://registry.npmjs.org/use-lax/-/use-lax-4.0.4.tgz"
   "version" "4.0.4"
+
+"usehooks-ts@^2.6.0":
+  "integrity" "sha512-Kj/4oc2nOxRDGTDb2v1ZulF7+tpeXFuqI6cUesM0Vic7TPPDlFORxKh4ivsYg+NTvX/YbM+lhqqkfFTiIt23eg=="
+  "resolved" "https://registry.npmjs.org/usehooks-ts/-/usehooks-ts-2.6.0.tgz"
+  "version" "2.6.0"
 
 "util-deprecate@^1.0.1", "util-deprecate@~1.0.1":
   "integrity" "sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8="
