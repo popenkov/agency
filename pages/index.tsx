@@ -3,10 +3,9 @@ import { useEffect, useState, useRef } from 'react';
 
 import AboutUs from '../components/Windows/AboutUs/AboutUs';
 import Cases from '../components/Windows/Cases/Cases';
-import ContactUs from '../components/Windows/ContactUs/ContactUs';
+import ContactUs from '../components/ContactUs/ContactUs';
 import WindowFirst from '../components/Windows/windowFirst/WindowFirst';
 import WindowFooter from '../components/Windows/WindowFooter/WindowFooter';
-import { scroller } from '../utils/scroller';
 import styles from './index.module.scss';
 
 import { withLayout } from '../Layout/Layout';
@@ -38,6 +37,12 @@ const Home: NextPage = () => {
       <WindowFirst />
       <AboutUs />
       <Cases />
+      <ContactUs
+        modalActive={true}
+        setModalActive={() => {
+          return null;
+        }}
+      />
 
       {/* <WindowFirst />
       <AboutUs />

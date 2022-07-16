@@ -4,6 +4,7 @@ import BIRDS from 'vanta/dist/vanta.net.min';
 import styles from './WindowFirst.module.scss';
 import { Header } from '../../../Layout/Header/Header';
 import { Footer } from '../../../Layout/Footer/Footer';
+import ScrollDown from '../../UI/ScrollDown/ScrollDown';
 
 const WindowFirst = React.forwardRef((windowRef): JSX.Element => {
   //    speed: -10,
@@ -17,7 +18,9 @@ const WindowFirst = React.forwardRef((windowRef): JSX.Element => {
         BIRDS({
           el: myRef.current,
           color: 0xff3f81,
-          backgroundColor: 0x181625,
+          // color: 0xbebebe,
+          // backgroundColor: 0x181625,
+          backgroundColor: 0x131314,
           points: 12,
           maxDistance: 24,
         })
@@ -43,7 +46,9 @@ const WindowFirst = React.forwardRef((windowRef): JSX.Element => {
         ></source>
       </video> */}
 
-      <Footer className={styles.windowFooter} />
+      <div className={styles.scroll}>
+        <ScrollDown />
+      </div>
     </div>
   );
 });
